@@ -59,3 +59,15 @@ function exibirReceitas(a) {
 }
 
 exibirReceitas(1)
+
+const deletarReceita = (id) => {
+    const indiceReceita = listaDeReceitas.findIndex((receita) => {
+      return receita.id === id;
+    });
+  
+    if (indiceReceita === -1) {
+      return console.log("Receita não encontrada");
+    }
+    listaDeReceitas.splice(indiceReceita, 1);
+    console.log("Receita deletada com sucesso!");
+};
